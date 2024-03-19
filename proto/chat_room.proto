@@ -4,13 +4,14 @@ package  chatroom;
 
 option go_package=".";
 
-service ChatRoom {
-  rpc chat(stream ChatMessage) returns(stream ChatMessage);
-}
-
 message ChatMessage{
   string id = 1;
   string name = 2;
   string time = 3;
   string content = 4;
 }
+service ChatRoom {
+  rpc chat(stream ChatMessage) returns(stream ChatMessage);
+}
+
+
